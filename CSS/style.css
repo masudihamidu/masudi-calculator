@@ -1,91 +1,111 @@
-html{
-    font-size: 63.5%;
-    box-sizing: border-box;
-}
-
-*, *::before, *::after{
+*, *::after, *::before{
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    font-family: inherit;
+}
+
+body{
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+body, html{
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+button{
+    cursor: pointer;
+    border: 0px;
 }
 
 .calculator{
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 100%;
+    max-width: 280px;
+    background-color: #000000;
+    padding: 2rem 1rem;
 }
 
+.calculator_header{
+    margin-top: 20px;
+    padding: 8px;
+}
 #calculator-screen{
     width: 100%;
-    font-size: 5rem;
-    height: 80px;
+    font-size: 4rem;
+    height: 70px;
     border: none;
-    background-color: #fff;
-    color: black;
-    text-align: right;
-    padding-right: 20px;
-    padding-left: 10px;
+    background-color: transparent;
+    color: #ffffff;
+    text-align: end;
+    margin: auto;
 }
 
 .btn{
     height: 60px;
-    background-color: #fff;
-    border-radius: 3px;
-    border: 1px solid #c4c4c4;
-    background-color: transparent;
+    background-color: #313131;
+    border-radius: 50px;
+    border: 1px solid #313131;
     font-size: 2rem;
-    color: #333;
+    color: white;
 }
 
 .btn:hover{
-    background-color: #eaeaea;
+    background-color: #999999;
 }
 
 .operator{
-    color : #337cac;
+    color : #ffffff;
+    background-color: #f69906;
 }
 
+.operator:hover{
+    background-color: orange;
+}
 .clear{
-    background-color: #f0595f;
-    border-color: #b0353a;
-    color: #fff;
-    height: 60px;
-    border-radius: 3px;
-    border: 1px solid #b0353a;    
+    background-color: #9f9f9f;
+    border-color: #9f9f9f;
+    color: #000;
+    border-radius: 50px; 
+    font-size: 1rem;   
 }
 
 .clear:hover{
-    background-color: #f17377;
+    background-color: #ededed;
 }
 
 #del{
-    background-color: lightcoral;
-    border-color: #b0353a;
-    color: #fff;
-    height: 60px;
-    border-radius: 3px;
-    border: 1px solid #c4c4c4;
+    background-color: #9f9f9f;
+    border-color: #9f9f9f;
+    color: #000;
+    border-radius: 50px;
+    font-size: 1rem;
 }
 
 #del:hover{
-    background-color: #b0353a;
+    background-color: #ededed;
 }
 
 .equal-sign{
-    background-color: #2e86c0;
-    border-color: #337cac;
-    color: #fff;
+    background-color: #9f9f9f;
+    border-color: #9f9f9f;
+    color: #000;
     height: 60px;
-    border-radius: 3px;
-    border: 1px solid #337cac;
+    border-radius: 50px;
+    font-size: 1rem;
 }
 
 .equal-sign:hover{
-    background-color: #4e9ed4;
+    background-color: #ededed;
 }
 
 .calculator-keys{

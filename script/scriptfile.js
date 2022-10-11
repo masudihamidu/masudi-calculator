@@ -1,10 +1,10 @@
-const btns = document.querySelectorAll('.btn');
-const display = document.querySelector('#calculator-screen');
-const calc = document.querySelector('.equal-sign');
-const clear = document.querySelector('.clear');
-const delBtn = document.querySelector('#del');
+let btns = document.querySelectorAll('.btn');
+let display = document.querySelector('#calculator-screen');
+let calc = document.querySelector('.equal-sign');
+let clear = document.querySelector('.clear');
+let delBtn = document.querySelector('#del');
 
-const user = prompt("Enter your name");
+let user = prompt("Enter your name");
 if (user == null || user == ""){
     alert("You canceled the prompt");
 }
@@ -12,7 +12,7 @@ else{
     alert("Hello! " + user + ", welcome to Masudi Calculator");
 }
 
-const btnArr = [];
+let btnArr = [];
 for(var i=0; i<btns.length; i++){
     btnArr.push(btns[i]);
 }
@@ -35,8 +35,8 @@ delBtn.addEventListener('click', function(){
     display.textContent = display.textContent.substr(0, display.textContent.length - 1);
 });
 
-const doMath = function(){
-    const value = display.textContent;
+let doMath = function(){
+    let value = display.textContent;
     if(!value){
         display.textContent = '';
     } else {
